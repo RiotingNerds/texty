@@ -7,6 +7,18 @@ var express = require('express'),
     favicon = require('serve-favicon'),
     bodyParser = require('body-parser');
 
+/*
+import { RouterContext, match } from 'react-router'
+import { renderToString } from 'react-dom/server'
+import React from 'react'
+
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import workWithApp from '../../react_component/reducers'
+import {Routes} from '../../react_component/router'
+*/
+
+
 module.exports = function(options) {
   var controllerRequire = {};
   return {
@@ -48,6 +60,34 @@ module.exports = function(options) {
         var func = ctrl[defaultAction]
         app[defaultMethod](routePath,func)
       });
+
+/*
+      app.all('/admin/*', function(req,res) {
+        match({ routes:Routes, location: req.url }, (error, redirectLocation, renderProps) => {
+          if (error) {
+            res.status(500).send(error.message)
+          } else if (redirectLocation) {
+            res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+          } else if (renderProps) {
+            // You can also check renderProps.components or renderProps.routes for
+            // your "not found" component or route respectively, and send a 404 as
+            // below, if you're using a catch-all route.
+
+            const store = createStore(workWithApp)
+            const initialState = store.getState()
+            const html = renderToString(
+                <Provider store={store}>
+                  { <RouterContext {...renderProps}/> }
+                </Provider>
+            )
+            res.view('homepage',{root:html})
+          } else {
+            res.status(404).send('Not found')
+          }
+        })
+      })
+*/
+
       app.use(function(req, res, next) {
         var err = new Error('Not Found');
         err.status = 404;
