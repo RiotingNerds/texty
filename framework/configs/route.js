@@ -1,4 +1,8 @@
 module.exports = {
 	'GET /': 'sites.index',
-  'GET /': 'post.index'
+
+
+  'GET /admin/post': 'post.index',
+  'GET /admin/post/create': 'post.create'
+  
 }

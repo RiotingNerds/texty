@@ -27,8 +27,8 @@ var post = Schema({
 });
 
 post.methods.addMeta = (metaObj,cb) => {
-  return this.model('post').
+  return this.model('post').update({_id: this.id},{$set:{meta: metaObj}},cb);
 }
 
 
-module.exports = mongoose.model('options', options);
+module.exports = mongoose.model('post', post);
