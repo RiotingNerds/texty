@@ -6,16 +6,18 @@ import Login from './containers/Login'
 
 
 export const Routes = (
-  <Route name="app" component={App}>
-    <Route path="/" component={Home} />
-    <Route path="/login" component={Login} />
+  <Route name="app" path="/admin" component={App}>
+    <Route path="/post" component={Home} />
+    <Route path="/" component={Login} />
   </Route>
 )
 
 const AppRouter = () => {
-  return (<Router history={browserHistory}>
-            {Routes}
-        </Router>)
+  return (
+    <Router history={browserHistory}>
+      {Routes}
+    </Router>
+  )
 }
 
 export default AppRouter
