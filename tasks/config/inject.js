@@ -3,14 +3,15 @@ module.exports = function(grunt) {
   grunt.config.set('injector', {
     framework: {
       options: {
-        template:'<%= dirs.framework %>/views/layout/main.ejs',
         relative:false,
+        destFile: '<%= dirs.framework %>/views/layout/main.ejs',
         ignorePath: [
-          '<%= dirs.root %>/www'
+          '<%= dirs.root %>/www',          
         ]
       },
       files: [{
-        expand: false,
+        expand: true,
+        flatten: true,
         src: ['<%= dirs.root %>/www/assets/admin/js/**/*.js','<%= dirs.root %>/www/assets/admin/css/**/*.css'],
         dest: '<%= dirs.framework %>/views/layout/main.ejs'
       }]
