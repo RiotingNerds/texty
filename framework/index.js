@@ -7,8 +7,8 @@ module.exports = function(options) {
     publish: function() {
       options.frameworkPath = path.dirname(__filename); 
       var app = expressConfig(options).init();
-      app.listen(3000, function () {
-        console.log('Example app listening on port 3000!');
+      app.listen(1337, function () {
+        console.log('Example app listening on port 1337!');
       });
     }
   }

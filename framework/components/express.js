@@ -14,7 +14,7 @@ import React from 'react'
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import workWithApp from '../react_components/reducers'
+import texty from '../react_components/reducers'
 import {Routes} from '../react_components/router'
 
 
@@ -36,7 +36,7 @@ module.exports = function(options) {
       //app.use(favicon(path.join(rootPath, 'public', 'favicon.ico')));
       app.use(bodyParser.json());
       app.use(bodyParser.urlencoded({ extended: false }));
-      app.use(express.static(path.join(options.appPath, 'public')));
+      app.use(express.static(path.join(options.rootPath, 'www')));
       _.forEach(middlewareConfig.order, function(value) {
         app.use(middlewareConfig.middleware[value])
       });
@@ -70,7 +70,7 @@ module.exports = function(options) {
             // your "not found" component or route respectively, and send a 404 as
             // below, if you're using a catch-all route.
 
-            const store = createStore(workWithApp)
+            const store = createStore(texty)
             const initialState = store.getState()
             const html = renderToString(
                 <Provider store={store}>
