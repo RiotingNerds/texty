@@ -1,0 +1,268 @@
+@import "common/include";
+
+.single-deal {
+  .entry-content {
+    h4,h3,h5,h2,h1 {
+      font-family: @titleFont;
+    }
+    h1 {
+      font-size: 18px;
+      line-height: 110%;
+      font-weight: bold;
+      margin: 25px 0px;
+    }
+    ul {
+      li {
+        margin-bottom:10px;
+      }
+    }
+    .acf-map {
+      height: 250px;
+      border: #ccc solid 1px;
+    }
+    .deal-location {
+      margin-bottom:20px;
+      .locationMarker {
+        font-size:22px;
+      }
+    }
+  }
+  #deal-banner {
+    height:auto;
+    .desktop({
+      height: auto;
+      img {
+        width:100%;
+      }
+      &>.grids {
+         &>.grid-8 {
+           width:100%;
+         }
+        &>.grid-5 {
+          float: none;
+          position: static;
+          margin-left: 20px;
+          min-height: 0px;
+          width: 100%;
+          display: block;
+        }
+       }
+    })
+  }
+  .deal-banner {
+    height: 375px;
+    overflow: hidden;
+    margin-bottom:25px;
+    @media (max-width: 767px) {
+      height: auto;
+      overflow: inherit;
+      margin-bottom:0px;
+    }
+
+  }
+
+  .single-title {
+    .entry-title {
+      text-align: left;
+      color:#3e3e3e;
+      font-size:36px;
+      font-family: @bodyFont;
+      text-transform: none;
+    }
+
+  }
+  .single-author {
+    a {
+      text-decoration: none;
+      font-family: @titleFont;
+      color:@primaryColor;
+      font-size:18px;
+    }
+    text-align: left;
+  }
+  #deal-footer-form {
+    background-color: @deal-form-background-color;
+    padding: 20px 0px;
+    color:white;
+    margin-bottom:30px;
+    .box-sizing();
+    text-align: center;
+    font-family: @bodyFont;
+    font-size:16px;
+    .signUpViaFacebook {
+      width: 150px;
+      padding: 2px;
+      vertical-align: middle;
+      font-size: 14px;
+      display: inline-block;
+    }
+    .grid-4 {
+      box-sizing: border-box;
+    }
+    #footer-form-info {
+      padding-left:45px;
+      .portraitTablet({
+        padding-left: 0px;
+      })
+    }
+    #footer-form-inputs {
+      padding-right: 45px;
+      .portraitTablet({
+        padding:0 10px;
+      });
+      .desktop({
+        padding:0 20px;
+      })
+    }
+    h3 {
+      font-size:32px;
+
+    }
+    .deal-tagline {
+      font-size:18px;
+      line-height: 110%;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    input {
+      &[type="text"],&[type="email"] {
+        font-size:14px;
+        margin-bottom:15px;
+        text-align: left;
+
+      }
+
+    }
+    button {
+      .commonButton();
+      padding:10px;
+      vertical-align: middle;
+
+    }
+    .errorContainer {
+      color:red;
+    }
+    .desktop({
+      .grids {
+        margin-left:0px;
+      }
+    .grid-4 {
+      padding: 0px 20px;
+      width: 100%;
+      margin-left: 0px;
+    }
+    });
+  }
+  .grids {
+    position: relative;
+    #deal-form {
+      margin-top: 10px;
+      position: absolute;
+      right: 0px;
+      min-height: 330px;
+      background-color: @deal-form-background-color;
+      padding: 7px 50px;
+      color:white;
+      text-align: center;
+      font-family: @bodyFont;
+      .box-sizing();
+      margin-left: 0px;
+      font-size:18px;
+      .portraitTablet({
+        margin-top: 0px;
+        position: static;
+      });
+      h3 {
+        font-size:32px;
+      }
+      .successMessage {
+        font-size:20px;
+        margin-top:95px;
+      }
+      .signUpViaFacebook {
+        width: 150px;
+        padding: 2px 15px;
+        vertical-align: middle;
+        font-size: 14px;
+        display: inline-block;
+      }
+      .deal-tagline {
+        text-align: center;
+        line-height: 120%;
+        margin-bottom: 20px;
+      }
+      input {
+        &[type="text"],&[type="email"] {
+          font-size:16px;
+          margin-bottom:15px;
+          text-align: left;
+        }
+        &#newsletter_email {
+          margin-bottom:0px;
+        }
+      }
+      button {
+        .commonButton();
+        margin-bottom:18px;
+        margin-top:10px;
+        padding: 10px 15px;
+      }
+      .errorContainer {
+        color:red;
+      }
+    }
+
+  }
+
+  .dealText {
+    .deal-tagline {
+      margin-bottom: 130px;
+      margin-top: 40px;
+    }
+  }
+
+  #cross-sell {
+    margin-top: 50px;
+    .sep {
+      background-color:@primaryColor;
+      height: 1px;
+      width: 100%;
+    }
+    h1 {
+      font-size:24px;
+      color:@primaryColor;
+      font-family: @bodyFont;
+      padding: 25px 0px;
+    }
+    .desktop({
+      .grids {
+        margin-left: 0px;
+        .grid-4 {
+          width:100%;
+          margin-left:0px;
+          .entry-title {
+            min-height: 0px;
+          }
+        }
+      }
+    });
+    .grid-4 {
+      &:last-child {
+        padding: 45px;
+        box-sizing: border-box;
+        text-align: center;
+        h1 {
+          font-size: 32px;
+          line-height: 110%;
+          color:@deal-form-background-color;
+          margin-bottom:30px
+        }
+        .viewMoreDeal {
+          .commonButton(@deal-form-background-color);
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

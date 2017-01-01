@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="modern js no-touch csstransforms csstransforms3d csstransitions svg">
+  <head>
+    <%- header.title.toString() %>
+    <%- header.meta.toString() %>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Lora|Montserrat:400,700|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="//unpkg.com/react-select/dist/react-select.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/554c38fe95.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- injector:css -->
+    <link rel="stylesheet" href="/assets/public/MontserratFont/stylesheet.css">
+    <link rel="stylesheet" href="/assets/public/playfair/stylesheet.css">
+    <link rel="stylesheet" href="/assets/public/css/dv.css">
+    <link rel="stylesheet" href="/assets/public/dv/etudehouse2016/main.css">
+    <!-- endinjector -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '649714811846746');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1"
+      src="https://www.facebook.com/tr?id=649714811846746&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38372508-1']);
+      _gaq.push(['_gat._forceSSL']);
+      _gaq.push(['_gat._anonymizeIp']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=270127536451174";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="pageslide" class="st-menu st-effect">
+        <a href="#" id="close-pageslide"><i class="icomoon-remove-sign"></i></a>
+    </div><!-- Sidebar in Mobile View -->
+    <%- body %>
+    <!-- injector:js -->
+    <script src="/assets/admin/js/dvShop.production.js"></script>
+    <script src="/assets/public/custom.js"></script>
+    <!-- endinjector -->
+  </body>
+</html>

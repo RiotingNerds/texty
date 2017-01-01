@@ -93,3 +93,9 @@ GitHub.sublime-settings
 # Cloud9 IDE - http://c9.io
 .c9revisions
 .c9
+.idea/dailyvanity-shop.iml
+.idea/modules.xml
+.idea/workspace.xml
+www/
+.tmp/
+.idea/

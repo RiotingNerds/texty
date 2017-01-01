@@ -1,25 +1,28 @@
 module.exports = function(grunt) {
 
   grunt.config.set('less', {
-    template: {
-      options: {        
+    dev: {
+      options: {
         sourceMapBasepath:'/'
       },
       files:  [{
         expand: false,
-        src: ['<%= dirs.template %>/assets/*.less'],
-        dest: '.tmp/assets/public/css/template.css',
+        src: ['<%= dirs.framework %>/assets/texty.less','<%= dirs.template %>/**/*.less'],
+        dest: '.tmp/assets/public/css/dv.css',
         ext: '.css'
       }]
     },
-    framework: {
-      options: {        
-        
+    prod: {
+      options: {
+        sourceMapBasepath:'/',
+        plugins: [
+          new (require('less-plugin-clean-css'))(["compatibility=ie8",'advanced','sourceMapInlineSources'])
+        ],
       },
       files:  [{
         expand: false,
-        src: ['<%= dirs.framework %>/assets/texty.less'],
-        dest: '.tmp/assets/admin/css/admin.css',
+        src: ['<%= dirs.framework %>/assets/texty.less','<%= dirs.template %>/**/*.less'],
+        dest: '.tmp/assets/public/css/dv.css',
         ext: '.css'
       }]
     }

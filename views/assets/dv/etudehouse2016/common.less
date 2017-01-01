@@ -1,0 +1,42 @@
+.normalTips(@h2fontsize:30px,@h2margintop:40px) {
+  .normalTips {
+    margin-top:40px;
+    .tipImage {
+      img {
+        width:100%;
+      }
+      width:100%;
+      .bigDesktop({
+        width:550px;
+      });
+      .desktopNew({
+        width:510px;
+      });
+    }
+    .tipContainer {
+      h2 {
+        .commonTitleFont(130%,@bodyFont);
+        margin-top:@h2margintop;
+        font-size:@h2fontsize;
+      }
+      .portraitTablet({
+        width:100%;
+        h2 {
+          margin-top:30px
+        }
+        .tipContent {
+          margin-top:20px;
+        }
+      });
+      .desktop({
+        width:100%;
+        h2 {
+          margin-top:30px
+        }
+        .tipContent {
+          margin-top:20px;
+        }
+      });
+    }
+  }
+}

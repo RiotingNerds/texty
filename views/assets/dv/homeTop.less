@@ -1,0 +1,295 @@
+@import "common/include";
+@import "sliderOverride";
+#homeTop {
+  @maxHeight:375px;
+  @sliderWidth:720px;
+  @newsletterWidth: (1050-@sliderWidth);
+  position: relative;
+  margin-bottom: 30px;
+
+  .posts-slider-section {
+    #homeSlider {
+      &.loading li {
+
+      }
+      .slides li {
+
+      }
+    }
+    width:@sliderWidth;
+
+
+    @navTop: 230px;
+    @navSize: 45px;
+
+    .navBox() {
+      top: @navTop;
+      height: @navSize;
+      width: @navSize;
+      text-align: center;
+      line-height: @navSize;
+      color: white;
+    }
+    .flex-next {
+      .navBox();
+      right: 0px;
+    }
+
+    .flex-prev {
+      right: (@navSize*2);
+      .navBox();
+    }
+    .flex-pauseplay {
+      .flex-play,.flex-pause {
+        right: (@navSize);
+        .navBox();
+        background-color: @primaryColor;
+        position: absolute;
+        cursor: pointer;
+      }
+
+    }
+    .portraitTablet({
+      .flex-direction-nav {
+        float: right;
+        li {
+          float: left;
+          a {
+            position: static;
+            display: block;
+            background-color:black;
+          }
+        }
+      }
+      .flex-pauseplay {
+        float: right;
+        .flex-pause,.flex-play {
+          float:left;
+          position: static;
+        }
+      }
+    })
+
+
+
+  }
+  #editorPick {
+    position: absolute;
+    z-index: 11;
+  }
+  .newsletter {
+    background-image: url(../images/bannerNewsletter.png);
+    width: @newsletterWidth;
+    height: @maxHeight;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    .box-sizing();
+    padding: 20px 25px;
+    text-align: center;
+    font-family: @bodyFont;
+    color:@newsletterColor;
+    font-size: 16px;
+    line-height: 120%;
+    .portraitTablet({
+      background-position: top right;
+      background-repeat:no-repeat;
+      background-color:#E1E1E1;
+    });
+    .desktop({
+      background-position: top right;
+      background-repeat:no-repeat;
+      background-color:#E1E1E1;
+      height:auto;
+    });
+    h3 {
+      font-size: 22px;
+      color:@newsletterColor;
+      font-family: @bodyFont;
+      line-height: 140%;
+    }
+    .inputContainer {
+      margin-top:25px;
+    }
+    .successContainer {
+      margin-top:110px;
+    }
+    div {
+      margin-top:10px;
+    }
+    input  {
+      &[type="text"],&[type="email"] {
+        padding: 5px;
+        border: 1px solid #000;
+        font-size: 16px;
+        width: 95%;
+        margin-bottom:10px;
+        .box-shadow("2px 2px 5px #888888");
+      }
+      &[type="email"] {
+        margin-bottom:20px;
+      }
+      .placeholder({
+        color:#676767;
+        opacity: 0.6;
+        font-style: italic;
+        font-family: @bodyFont;
+      })
+    }
+    .buttonNav {
+      span {
+        font-size:12px;
+        color: #000000;
+        font-family: @titleFont;
+        display: inline-block;
+        margin: 0px 10px;
+      }
+      .signUpViaFacebook {
+        display: inline-block;
+        padding: 8px 0px;
+        width: 120px;
+        vertical-align: middle;
+        line-height: 12px;
+      }
+    }
+    button {
+      background-color: black;
+      border: 0px;
+      color: white;
+      font-size: 15px;
+      padding: 10px 15px;
+      font-family: @titleFont;
+    }
+
+    .errorContainer {
+      margin-top: 0px;
+      font-size: 14px;
+      line-height: 15px;
+      div {
+        margin-top:5px;
+      }
+    }
+
+  }
+  figure {
+    height: @maxHeight;
+    background-color: black;
+    &:before {
+      background-color:transparent;
+    }
+    @media (max-width: 767px) {
+      height:auto;
+    }
+  }
+  img.alter {
+    background-color:transparent;
+  }
+  .infoContainer {
+    .entry-header {
+      position:static;
+      text-transform: none;
+      .vcard.author {
+        font-size: 12px;
+        letter-spacing: 0px;
+      }
+
+      .entry-title {
+        height: 95px;
+        .portraitTablet({
+          height: auto;
+        });
+        line-height: 26px;
+        letter-spacing: 0px;
+      }
+    }
+    .read-more-link {
+      margin-top:-20px;
+      font-size:12px;
+    }
+    right: 0px;
+    float: right;
+    margin-top: -100px;
+    margin-left:inherit;
+    @media (max-width: 767px) {
+      margin-top: 0px;
+      width:100%;
+    }
+  }
+  .entry-header {
+    text-align: left;
+  }
+  @media only screen and (max-width: 959px) {
+    .posts-slider-section {
+      width:100%;
+    }
+    #topNewsletter {
+      position: static;
+      width:100%;
+      margin-top:20px;
+    }
+  }
+}
+#beautyTips {
+  margin-top:15px;
+  .flex-display();
+  .tip,.tipsTitle {
+    width:25%;
+  }
+  .tip {
+    .box-sizing();
+    padding:0 5px;
+    img {
+      min-height:140px;
+      width:100%;
+      .portraitTablet({
+        min-height: 0px;
+      });
+      .desktop({
+        min-height: 0px;
+      });
+    }
+    .desktop({
+      width:33.3333%;
+
+    });
+    .portraitTablet({
+      &:last-child {
+        display: none;
+      }
+      width: 50%;
+    });
+  }
+  .tipsTitle {
+    background-color:@primaryColor;
+    color:white;
+    max-height: 140px;
+    .portraitTablet({
+      display: none;
+    });
+    .desktop({
+      display: none;
+    })
+  }
+  .beautyContent {
+    padding:5px;
+    a {
+      text-decoration: none;
+    }
+    .flex-display();
+    .flex-direction(column);
+    .justify-content(space-between);
+    .content {
+      .commonBodyFont(17px);
+      font-weight:bold;
+      color:@home-topBeautyTipsTitleColor;
+      font-size:16px;
+      min-height: 70px;
+    }
+    .author {
+      .commonTitleFont();
+      font-size:12px;
+      text-transform: uppercase;
+      color:@primaryColor;
+    }
+  }
+}

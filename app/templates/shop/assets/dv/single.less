@@ -1,0 +1,282 @@
+@import "common/include";
+.single-post,.page-template-ArticlePage {
+  .single-title {
+    .entry-title {
+      font-size:36px;
+      font-family: @titleFont;
+      text-transform: none;
+    }
+  }
+  iframe {
+    width:100%;
+  }
+  .entry-meta {
+    .entry-date {
+      margin-left:8px;
+    }
+    .entry-category {
+      a {
+        font-weight: bold;
+        color:@primaryColor;
+      }
+
+      &::after {
+        content:"";
+        display: none;
+      }
+    }
+  }
+  #topicContainer {
+    .title {
+      font-family: @bodyFont;
+      font-size:32px;
+      color:@primaryColor
+
+    }
+  }
+
+  .entry-header  {
+    .vcard.author {
+      &.author {
+        font-family: @titleFont;
+        font-size:12px;
+        color:@primaryColor;
+        a {
+          color:@primaryColor;
+        }
+      }
+    }
+    &.page-header{
+      &:after {
+        content: ' ';
+        background-color: @primaryColor;
+        height: 1px;
+        width:100%;
+        display: block;
+        margin-top: 25px;
+      }
+    }
+
+  }
+  .single-author {
+    display: table;
+    width: 100%;
+    .vcard.author {
+      display: table-cell;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  article {
+    &>.wrapper {
+      &>.grids {
+        min-height: 3400px;
+        .portraitTablet({
+          min-height: 0px;
+        })
+      }
+    }
+  }
+
+  #cross-sell {
+    margin-top: 50px;
+    .sep {
+      background-color:@primaryColor;
+      height: 1px;
+      width: 100%;
+    }
+    h1 {
+      font-size:24px;
+      color:@primaryColor;
+      font-family: @bodyFont;
+      padding: 25px 0px;
+    }
+    .desktop({
+    .grids {
+      margin-left: 0px;
+      .grid-4 {
+        width:100%;
+        margin-left:0px;
+        .entry-title {
+          min-height: 0px;
+        }
+      }
+    }
+    });
+    .grid-4 {
+      &:last-child {
+        padding: 45px;
+        box-sizing: border-box;
+        text-align: center;
+        h1 {
+          font-size: 32px;
+          line-height: 110%;
+          color:@deal-form-background-color;
+          margin-bottom:30px
+        }
+        .viewMoreDeal {
+          .commonButton(@deal-form-background-color);
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+#topicContainer {
+  margin-top: 15px;
+  .single-author-box {
+    display: table;
+    margin-bottom:20px;
+  }
+  #author-bio {
+    display: table-row;
+    vertical-align: middle;
+  }
+  .avatar {
+    display: table-cell;
+    float: none;
+    height: 140px;
+    width: 140px;
+    vertical-align: middle;
+    img {
+      height: 100%;
+    }
+  }
+  .sepTopic {
+    border-top:1px solid @primaryColor;
+  }
+  .author-info {
+    display: table-cell;
+    vertical-align: middle;
+    margin-left:0px;
+    float: none;
+    font-size: 14px;
+    font-family: @titleFont;
+    color:@primaryFontColor;
+    padding-left: 25px;
+    a {
+      text-decoration: none;
+    }
+    .vcard.author {
+      font-family: @bodyFont;
+      font-size:22px;
+    }
+    .authorIntro {
+      text-transform: uppercase;
+      color:@primaryColor;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  .tag-box {
+    border-top:0px;
+    margin-top:10px;
+    padding-top:0px;
+
+  }
+  border-top:1px solid @primaryColor;
+
+}
+.dealsSinglePage {
+  .portraitTablet({
+    display: none;
+  })
+}
+#dealsSingle {
+  .flex-display();
+  margin-top: 40px;
+  .deal,.dealTitle {
+    width:25%;
+    .box-sizing();
+    @media (max-width: 767px) {
+      display: block;
+      width:auto;
+    }
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
+  .deal {
+    img {
+      min-height:140px;
+      width:100%;
+    }
+    padding:0px 5px;
+    @media (max-width: 767px) {
+      margin-bottom:5px;
+    }
+  }
+  .dealTitle {
+    padding:10px 20px;
+    font-family: @bodyFont;
+    font-size:32px;
+    line-height: normal;
+    color:@primaryFontColor;
+    margin-bottom:15px;
+    .viewMoreDealLink {
+      background-color:@primaryFontColor;
+      font-size: 14px;
+      font-family: @titleFont;
+      color:white;
+      padding:10px 0px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  .dealContent {
+    padding:5px;
+    a {
+      text-decoration: none;
+    }
+    .flex-display();
+    .flex-direction(column);
+    .justify-content(space-between);
+    .content {
+      .commonBodyFont(normal);
+      color:@home-topBeautyTipsTitleColor;
+      font-size:20px;
+      min-height: 105px;
+      .portraitTablet({
+        min-height: 0px;
+      })
+    }
+    .author {
+      .commonTitleFont();
+      font-size:12px;
+      text-transform: uppercase;
+      color:@primaryColor;
+      font-weight: bold;
+      min-height: 40px;
+    }
+
+  }
+  .dealLink {
+    padding:7px 15px;
+    background-color: @primaryColor;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top:10px;
+    font-size:14px;
+    text-decoration: none;
+    font-family: @titleFont;
+    .portraitTablet({
+      display: block;
+      text-align: center;
+    });
+  }
+
+}
+#author-bio {
+  #author_description {
+    height: 85px;
+  }
+  .author-link {
+    display: none;
+  }
+}

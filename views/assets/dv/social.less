@@ -1,0 +1,61 @@
+@import "common/include";
+#socialContainer {
+  margin-bottom: 25px;
+  #whatsappContainer {
+    display: none;
+    .desktop({
+      margin:5px 0px;
+    });
+    .portraitTablet({
+      margin-top:0px;
+    })
+  }
+  &>div {
+    .portraitTablet({
+      margin-bottom:5px;
+    });
+  }
+  .portraitTablet({
+    .grid-2 {
+      display: none;
+    }
+  });
+  .socialBtn {
+    width:100%;
+    .box-sizing();
+    padding:10px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-family: @titleFont;
+    font-size: 18px;
+    .textNode {
+      display: table-cell;
+      vertical-align: middle;
+      i {
+        vertical-align: middle;
+        margin-right:5px;
+      }
+    }
+    text-decoration: none;
+    color:white;
+    &.facebookBtn {
+      background-color: #4264aa;
+    }
+    &.twitterBtn {
+      background-color: #02c2f7;
+    }
+    &.whatsappBtn {
+      background-color: #4dc247;
+    }
+  }
+  .fbLike {
+    font-size: 18px;
+    font-family: @titleFont;
+    color:#3e3e3e;
+  }
+}
+
+
+

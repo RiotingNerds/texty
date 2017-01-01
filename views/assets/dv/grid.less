@@ -1,0 +1,32 @@
+.grids.liquid {
+  @perGrid:(100%/12);
+  margin-left:0px;
+  [class*="grid-"] {
+    margin-left:0px;
+  }
+  @media only screen and (min-width: 751px) {
+    .grid-1 {
+      width:@perGrid;
+    }
+    .grid-2 {
+      width:@perGrid*2;
+    }
+    .grid-3 {
+      width:@perGrid*3;
+    }
+    .grid-4 {
+      width:@perGrid*4;
+    }
+    .grid-5 {
+      width:@perGrid*5;
+    }
+    .grid-6 {
+      width:@perGrid*6;
+    }
+    .grid-7 {
+      width:@perGrid*2;
+    }
+  }
+
+
+}

@@ -4,10 +4,10 @@ module.exports = function(grunt) {
     assets: {
 
       // Assets to watch:
-      files: ['framework/react_components/**/*','framework/assets/**/*.less','templates/**/*'],
+      files: ['app/templates/**/*','app/assets/**/*.less'],
 
       // When assets are changed:
-      tasks: ['compile']
+      tasks: ['clean','compileDev','copy:build']
     }
   });
 

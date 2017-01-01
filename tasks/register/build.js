@@ -1,9 +1,8 @@
 module.exports = function(grunt) {
-  grunt.registerTask('build', [
-    'compile',
+  grunt.registerTask('buildDev', [
+    'compileDev',
     'clean:build',
     'copy:build',
     'injector:framework',
-    'express:build'
   ]);
 };

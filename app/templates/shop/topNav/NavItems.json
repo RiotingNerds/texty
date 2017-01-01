@@ -1,0 +1,50 @@
+[
+  {
+    "link":"/questions",
+    "text":"Beauty Q&A"
+  },
+  {
+    "link":"/celebrity",
+    "text":"Celebrities"
+  },
+  {
+    "link":"/contests",
+    "text":"Beauty Q&A"
+  },
+  {
+    "link":"/fitness",
+    "text":"Fitness & Wellness"
+  },
+  {
+    "link":"/mensgrooming",
+    "text":"Men’s Grooming"
+  },
+  {
+    "link":"/news",
+    "text":"News & Stories"
+  },
+  {
+    "link":"/trends",
+    "text":"Trends & Styles"
+  },
+  {
+    "link":"/weddings",
+    "text":"Weddings"
+  },
+  {
+    "link":"/video-tutorial",
+    "text":"Video"
+  },
+  {
+    "link":"/opinion",
+    "text":"Opinion"
+  },
+  {
+    "link":"/about-us",
+    "text":"About Us"
+  },
+  {
+    "link":"/contact-us",
+    "text":"Contact Us"
+  }
+]

@@ -1,13 +1,13 @@
 module.exports = function(grunt) {
   var webpack = require("webpack");
   grunt.config.set('webpack', {
-    framework: {
-      entry: "./framework/react_components/index.js",
+    dev: {
+      entry: "./app/templates/shop/index.js",
       resolve: {
         modulesDirectories: ['node_modules', 'bower_components'],
       },
       output: {
-        filename: 'texty.js',
+        filename: 'dvShop.js',
         path: '.tmp/assets/admin/js'
       },
       watch:true,
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
             // "include" is commonly used to match the directories
             include: [
-              './framework/react_components/'
+              './app/templates/'
             ],
             exclude: /(node_modules|bower_components)/,
             // "exclude" should be used to exclude exceptions
@@ -30,21 +30,34 @@ module.exports = function(grunt) {
             query: {
               presets: ['es2015','react']
             }
+          },
+          {
+            // "test" is commonly used to match the file extension
+            test: /\.json$/,
+            loader: "json-loader",
           }
         ]
-      }    
+      }
     },
-    frameworkProd: {
-      entry: "./framework/react_components/index.js",
+    prod: {
+      entry: "./app/templates/shop/index.js",
       resolve: {
         modulesDirectories: ['node_modules', 'bower_components'],
       },
       output: {
-        filename: 'texty.js',
+        filename: 'dvShop.production.js',
         path: '.tmp/assets/admin/js'
       },
-      plugins: [new webpack.optimize.UglifyJsPlugin()],
-      watch:true,
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env':{
+            'NODE_ENV': JSON.stringify('production')
+          }
+        }),
+        new webpack.optimize.UglifyJsPlugin()
+      ],
+      quiet: true,
+      watch:false,
       module: {
         loaders: [
           {
@@ -53,7 +66,7 @@ module.exports = function(grunt) {
 
             // "include" is commonly used to match the directories
             include: [
-              './framework/react_components/'
+              './app/templates/'
             ],
             exclude: /(node_modules|bower_components)/,
             // "exclude" should be used to exclude exceptions
@@ -64,9 +77,14 @@ module.exports = function(grunt) {
             query: {
               presets: ['es2015','react']
             }
+          },
+          {
+            // "test" is commonly used to match the file extension
+            test: /\.json$/,
+            loader: "json-loader",
           }
         ]
-      }    
+      }
     }
   });
   grunt.loadNpmTasks('grunt-webpack');

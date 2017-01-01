@@ -1,0 +1,92 @@
+@import "../common/include";
+
+#deals_sidebar {
+  border:1px solid @border-color;
+  margin-bottom:10px;
+  padding: 15px 20px;
+  #tab_navs {
+    .flex-display();
+    .align-items(stretch);
+    .align-content(stretch);
+    .tab_nav {
+      width:50%;
+      text-align: center;
+      color:black;
+      a {
+        display: block;
+        padding: 7px 0px;
+        text-decoration: none;
+        font-family: @titleFont;
+        &.active {
+          background-color: @primaryColor;
+          color:white;
+        }
+      }
+    }
+    border-bottom:3px solid @primaryColor;
+  }
+  .dealsListing,.trendListing {
+  }
+  .dealList {
+    img {
+      width:100%;
+    }
+    .deal-owner {
+      font-family: @titleFont;
+      color: @primaryColor;
+      font-size:13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom:5px;
+      margin-top:3px;
+    }
+    .dealLink {
+      background-color:@primaryColor;
+      text-decoration: none;
+      text-transform: uppercase;
+      color:white;
+      padding: 8px 15px;
+      font-family: @titleFont;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 10px 0px 15px;
+      display: inline-block;
+    }
+    font-size: 20px;
+    color:@primaryFontColor;
+    font-family: @bodyFont;
+    line-height: normal;
+    border-bottom:1px solid black;
+    padding-top:18px;
+  }
+  #trendlisting {
+    .entry-date {
+      display: none;
+    }
+    .entry-category {
+      a {
+        color:@primaryColor;
+        font-family: @titleFont;
+        font-weight: bold;
+      }
+    }
+    .dealList {
+      border-bottom:0px;
+      img {
+        width:100%;
+      }
+
+    }
+  }
+  .viewMoreDealLink {
+    background-color: @primaryFontColor;
+    text-align: center;
+    display: block;
+    margin-top:10px;
+    text-decoration: none;
+    font-size:14px;
+    font-family: @titleFont;
+    color: white;
+    padding:10px;
+  }
+}

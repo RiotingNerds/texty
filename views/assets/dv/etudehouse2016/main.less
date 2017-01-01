@@ -1,0 +1,30 @@
+@import 'instagram';
+@import "story";
+@import "tips";
+@import "page";
+@import "microsite";
+@import "single";
+
+@import "store";
+@import "../common/font";
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#section-header,#page-header {
+  .commonBodyFont(120%,@titleFont);
+  h1 {
+    .commonTitleFont(120%,@bodyFont);
+    font-size:28px;
+    margin-bottom: 10px;
+    color: #f06d97;
+    font-size: 55px;
+  }
+  .hint {
+    font-size: 12px;
+  }
+  margin-bottom: 35px;
+  text-align: center;
+  color: #3e3e3e;
+}

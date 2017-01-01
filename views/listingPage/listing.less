@@ -1,0 +1,74 @@
+@import "../assets/dv/common/include";
+
+
+.productItem {
+  color:black;
+  .productImage {
+    margin-left:0px;
+    margin-right:30px;
+  }
+  .productInfo {
+    .brand {
+      margin-bottom:0px;
+    }
+  }
+  .cheapestPriceSupplier {
+    text-align:center;
+    .commonBodyFont(150%,@titleFont);
+    margin-top:10px;
+  }
+  .commonBtn {
+    &:link,&:visited,&:hover,&:active  {
+      color:white;
+    }
+  }
+}
+#gridControl {
+  text-align:center;
+  margin:20px 0px;
+}
+#listingContainer {
+  .desktop ({
+    #searchContainer {
+      width:240px;
+    }
+    #productListing {
+      width:470px;
+    }
+  })
+}
+.title-with-sep {
+    background: url(//dailyvanity.sg/wp-content/themes/simplemag/images/section-header.png) repeat-x 0 50%;
+    font-size: 48px;
+}
+#productSearchContainer {
+  #mobileHeader {
+    display:none;
+  }
+  #desktopHeader {
+    display:block;
+  }
+  .portraitTabletNew({
+    #filterContainer {
+      -webkit-transition: max-height 2s, padding-bottom 2s, padding-top 2s; /* Safari */
+      transition: max-height 2s, padding-bottom 2s, padding-top 2s;
+      max-height:900px;
+      overflow: hidden;
+    }
+    #mobileHeader {
+      display:block;
+    }
+    #desktopHeader {
+      display:none;
+    }
+    &.hideContainer {
+      #filterContainer {
+        max-height: 0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        overflow: hidden;
+      }  
+    }
+  });
+}
+

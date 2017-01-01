@@ -1,0 +1,24 @@
+@import "../assets/dv/common/include";
+.stepItem {
+  .icon {
+    min-height:50px;
+  }
+}
+.three-stepscontainer {
+  .portraitTablet({
+    flex-direction: column !important;  
+    .stepItem {
+      display:flex;
+      align-items:center;
+      margin-bottom: 35px;
+      padding: 0px 30px;
+      .description {
+        margin-left:20px;
+      }
+      .title {
+        margin-top:0px;
+        margin-bottom:0px;
+      }
+    }
+  });
+}

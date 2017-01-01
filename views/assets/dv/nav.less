@@ -1,0 +1,54 @@
+@import "common/include";
+.main-menu {
+  #menu-main-menu {
+    li {
+      a {
+        font-family: @titleFont !important;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+}
+#masthead {
+  .main-menu-container {
+    &:before {
+      background-color: @menu-background-color;
+      content: "";
+      display: table;
+      height: @height;
+      position: absolute;
+      width: 100%;
+      border-top: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
+      @media only screen and (max-width: 960px) {
+        display: none;
+      }
+    }
+  }
+  .main-menu {
+    >ul {
+      float: left;
+    }
+    .header.header-search {
+      float: right;
+    }
+    .social {
+      &[class*=icomoon-], [class^=icomoon-] {
+        font-family: icomoon;
+        color:white;
+      }
+    }
+    .header-search {
+      .search-form-cell {
+        #searchform input[type="text"] {
+          border:0px;
+          background-color: @menu-background-color;
+        }
+        #searchform button {
+          background-color: @menu-background-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "Makeup": [
+    "Eyes",
+    "Lips",
+    "Face",
+    "Nails",
+    "Cheek",
+    "Palettes & Sets",
+    "Tools"
+  ],
+  "Skincare": [
+    "Cleanse",
+    "Moisturise",
+    "Serum & Treatments",
+    "Sun Care",
+    "Sets",
+    "Skin Concerns"
+  ],
+  "Hair": [
+    "Treatments",
+    "Shampoo & Conditioner",
+    "Styling",
+    "Tools"
+  ],
+  "Tools & Brushes": [
+    "Brushes & Applicators",
+    "Small Tools",
+    "Hair Tools",
+    "Devices"
+  ],
+  "Bath & Body": [
+    "Body Wash",
+    "Manicure & Pedicure",
+    "Aromatherapy",
+    "Moisturise",
+    "Other Needs",
+    "Sun Care",
+    "Perfumes"
+  ],
+  "Men": [
+    "Face",
+    "Bath & Body",
+    "Hair",
+    "Shaving",
+    "Perfumes",
+    "Eyes"
+  ]
+}

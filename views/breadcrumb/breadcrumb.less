@@ -1,0 +1,15 @@
+#breadCrumbContainer {
+  margin-top:10px;
+}
+.breadLink {
+  &:after {
+    content:" / ";
+    display:inline-block;
+    margin: 0 5px;
+  }
+  &:last-child {
+    &:after {
+      display:none;
+    }
+  }
+}

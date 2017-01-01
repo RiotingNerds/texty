@@ -1,0 +1,37 @@
+@import "../assets/dv/common/include";
+
+#productListing {
+  .productItem {
+    .desktop({
+      .productImage {
+        width:100%;
+        img {
+          width:100%;
+        }
+      }
+      .productDetails {
+        width:100%;
+      }
+    });
+
+    .portraitTablet({
+      .productImage {
+        width:100%;
+        text-align: center;
+        img {
+          width:50%;
+        }
+      }
+      .productDetails {
+        width:100%;
+        margin-top:10px;
+      }
+    });
+  }
+  .desktopNew({
+    width: 650px;
+    .productDetails {
+      width: 490px;
+    }
+  });
+}

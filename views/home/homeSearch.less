@@ -1,0 +1,95 @@
+@import "../assets/dv/common/include";
+
+.supplierHolder {
+  .flex-container();
+  .individualSupplierHolder {
+
+  }
+}
+.homeImage {
+  max-height:160px;
+}
+
+.searchWrapper {
+  .portraitTablet({
+    height: auto;
+    background-image:none;
+  });
+  background-image:url(http://images.dailyvanity.sg/wp-content/uploads/2015/12/searchBackground-900x490.jpg);
+  height: 530px;
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+  .box-sizing();
+  select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .signupFormContainer {
+    background-color:#fbf9fa;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    .box-sizing();
+    padding: 20px 30px;
+    height: 470px;
+    .portraitTablet({
+      height: auto;
+    });
+    .signupform {
+      margin: 0 auto;
+      float: none;
+      .inputContainer {
+        margin-bottom:10px;
+        label {
+          .commonBodyFont();
+          font-style: italic;
+          color:#171717;
+          font-size:18px;
+          margin-bottom:5px;
+        }
+      }
+      .btnContainer {
+        margin-top:20px;
+        .shopSearchBtn {
+          text-transform: uppercase;
+          .commonButton();
+          width: 100%;
+          margin-top: 20px;
+          padding: 20px 10px;
+          font-size:13px;
+        }
+      }
+    }
+  }
+  .brandLogos {
+    text-align: center;
+    position: relative;
+    h2 {
+      text-align: center;
+      &.title {
+        .commonBodyFont();
+        font-size:24px;
+        margin-bottom:40px;
+        margin-top: 10px;
+        line-height: 200%
+      }
+      &.subTitle{
+        .commonTitleFont();
+        font-size:18px;
+        margin-top: 35px;
+        margin-bottom:18px;
+      }
+    }
+    margin-top:10px;
+  }
+  .searchContainer {
+    background-color:white;
+    .desktop({
+
+    })
+  }
+
+}

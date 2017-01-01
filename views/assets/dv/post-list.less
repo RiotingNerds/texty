@@ -1,0 +1,113 @@
+@import "common/include";
+
+@titleFontSize:22px;
+@subTitleFontSize:16px;
+@smallFontSize:12px;
+
+.list-layout {
+  &.entries {
+    .entry-image {
+      width: 100%;
+      max-width: 100%;
+      float: none;
+    }
+  }
+  .entry-header {
+    text-transform: none;
+  }
+
+}
+.page-home {
+  .infoContainer {
+    width: 80%;
+    margin-top: -150px;
+    margin-left: 5%;
+    .desktop({
+      margin: -20px 0px 0px;
+      width:100%;
+    })
+  }
+
+}
+
+.infoContainer {
+  z-index: 100;
+  position: relative;
+  padding: 10px 35px;
+  background-image: url(../images/postItemInfoContainerBackground.png);
+  border:1px solid @border-color;
+  .box-sizing();
+  .entry-title {
+    font-family: @bodyFont;
+    font-size:@titleFontSize;
+    line-height: 26px !important;
+    letter-spacing: 0px !important;
+    text-transform: none;
+  }
+  .vcard.author {
+    font-family: @titleFont;
+    font-size:@smallFontSize;
+    color:@primaryColor;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    a {
+      color:@primaryColor;
+      text-decoration: none;
+    }
+  }
+  .read-more-link {
+    font-family: @titleFont;
+    float:right;
+    font-size:14px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    color:@primaryColor;
+  }
+  .entry-meta {
+    font-family: @titleFont;
+    margin-top:0px;
+    .entry-category {
+      font-size: 12px;
+      color:@primaryColor;
+      letter-spacing: 0px;
+      a {
+        color:@primaryColor;
+      }
+      &:after {
+        content: ' ' !important;
+      }
+    }
+    .entry-date {
+      font-size: @smallFontSize;
+      letter-spacing: 0px;
+    }
+  }
+}
+.post-deal {
+  .infoContainer {
+    background-color:#9a2c50;
+    background-image: none;
+    .entry-meta,.entry-title,.vcard.author {
+      color:white;
+      a {
+        color:white;
+      }
+    }
+    .entry-meta {
+      font-size: 16px;
+      letter-spacing: 0px;
+    }
+    .read-more-link {
+      color:#ffa4c2;
+    }
+  }
+}
+#load-more {
+  text-align: center;
+  .loadMoreBtn {
+    .commonButton();
+    text-decoration: none;
+    display: inline-block;
+  }
+}

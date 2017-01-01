@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   grunt.config.set('browserSync', {
     dev: {
       bsFiles: {
-        src: ['views/**/*']
+        src: ['www/**/*.*']
       },
       options: {
         // When your app also uses web sockets

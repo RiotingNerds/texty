@@ -1,0 +1,70 @@
+@import "../assets/dv/common/include";
+#footer {
+  .footer-sidebar {
+    padding-top: 36px;
+    color: #8c919b;
+    background-color: #242628;
+  }
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+  #footerNewsletter {
+    color:white;
+    .commonInput {
+      color:black;
+    }
+    .nameInput {
+      margin-bottom: 20px;
+    }
+    .inputContainer {
+      width:auto;
+    }
+  }
+  .col-3 {
+    .widget-area {
+      box-sizing: border-box;
+      width: 16.66666667%;
+      border: none;
+      .portraitTablet({
+        width:100%;
+      });
+      .widget {
+        li {
+          font-size: 12px;
+          letter-spacing: normal !important;
+          line-height: normal;
+          text-transform: uppercase;
+          a {
+            padding: 5px 0px;
+            display: block;
+            position: relative;
+            color: #8c919b;
+            &:hover {
+              color: #ffcc0d;
+            }
+          }
+        }
+        font-size: 14px;
+        padding: 30px 0;
+        @media only screen and (min-width: 751px) {
+          padding-right: 8%;
+          &:first-child {
+            padding-left: 0;
+            border: none;
+          }
+        }
+      }
+      @media only screen and (min-width: 751px) {
+        float: left;
+        margin-bottom: -2000em;
+        padding-bottom: 2000em;
+      }
+    }
+    .widget-area-4 {
+      width: 49%;
+      .portraitTablet({
+        width:100%;
+      });
+    }
+  }
+}

@@ -1,8 +1,6 @@
 var _ = require('lodash'),
     path = require('path')
 module.exports = function(grunt) {
-
-
   tasks = require('include-all')({
     dirname     :  __dirname + '/tasks/config',
     filter      :  /(.+)\.js$/,
@@ -12,8 +10,8 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     dirs: {
-      framework: path.join(__dirname,'/framework'),
-      template: path.join(__dirname,'/templates'),
+      framework: path.join(__dirname,'/app'),
+      template: path.join(__dirname,'/app/templates/shop'),
       root: __dirname
     }
   })

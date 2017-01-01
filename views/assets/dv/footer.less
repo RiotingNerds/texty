@@ -1,0 +1,208 @@
+@import "common/include";
+#footer {
+  .equalWidth() {
+    width: (50%/3);
+  }
+  .col-3 {
+
+    .widget-area-1,.widget-area-3,.widget-area-2 {
+      .equalWidth();
+      border:none;
+    }
+    .widget-area-4 {
+      width:49%;
+    }
+    .widget_nav_menu li {
+      font-size:12px;
+      letter-spacing: normal;
+      a {
+        &:after {
+          background-color: transparent;
+        }
+        padding:5px 0px;
+      }
+    }
+    .widget-area {
+      .portraitTablet({
+        width:100%
+      })
+    }
+  }
+  .footer-sidebar {
+    padding-top: 36px;
+  }
+  #DVAddress {
+    text-align: center;
+    margin-top: 30px;
+    color: #D1D1D2;
+    font-size: 15px;
+    font-family: @titleFont;
+  }
+
+  #footerNewsletter {
+    font-family: @footerFont;
+    background-color: @primaryColor;
+    padding: 30px;
+    color: white;
+    font-size: 13px;
+    margin-top: 36px;
+    .nameInput {
+      margin-bottom: 13px;
+    }
+    #footerNewsletterContainer {
+      .flex-display();
+      .portraitTablet({
+        display: block;
+      })
+    }
+    .inputContainer {
+      width:50%;
+      .portraitTablet({
+        width:100%
+      });
+    }
+    .navContainer {
+      font-family: @titleFont;
+      padding-left: 16px;
+      span {
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+      }
+      .signUpViaFacebook {
+        display: block;
+        padding: 10px;
+        .portraitTablet({
+          text-align: center;
+        })
+      }
+      .portraitTablet({
+        margin-top:10px;
+        padding-left:0px;
+      })
+    }
+    .headline {
+      margin-bottom:15px;
+    }
+    button {
+      width: 100%;
+      min-width:75px;
+      float: left;
+      font-family: @footerFont;
+
+      background-color:black;
+      color:white;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 7px 9px;
+      border: 1px solid black;
+    }
+
+  }
+  #footerSliderNewsletter {
+    .control-slider {
+      float: right;
+      margin-top: -20px;
+      margin-right: -20px;
+    }
+    bottom:-360px;
+    position: fixed;
+    z-index:100;
+    font-family: @titleFont;
+    padding: 30px;
+    color: #2b2523;
+    font-size: 13px;
+
+    width: 250px;
+    border: 1px solid black;
+    background-color: white;
+    .transition(0.5s);
+    &.showUp {
+      bottom:0px;
+    }
+    .inputContainer {
+      input[type="text"],input[type="email"] {
+        margin-bottom:10px;
+      }
+    }
+
+    .navContainer {
+      font-family: @titleFont;
+      margin-top: 10px;
+      span {
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+      }
+      .signUpViaFacebook {
+        text-transform: uppercase;
+        padding: 10px;
+      }
+    }
+    .headline {
+      margin-bottom:15px;
+    }
+    button {
+      font-family: @footerFont;
+      text-transform: uppercase;
+      background-color:black;
+      color:white;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 7px 9px;
+      border: 1px solid black;
+    }
+  }
+  #footerCopy {
+    margin-top:25px;
+    font-size:14px;
+    font-family:@footerFont;
+    line-height: 110%;
+    color: white;
+    font-weight: bold;
+  }
+  #footerLogo {
+    text-align: right;
+  }
+
+}
+#footerCommon {
+  #footerBeautyTips {
+    margin-top:30px;
+    margin-bottom:40px;
+    text-align: center;
+    font-family: @bodyFont;
+    font-size:18px;
+    font-style: italic;
+    color:black;
+    h2 {
+      font-family: @bodyFont;
+      font-style: italic;
+      font-size:36px;
+    }
+  }
+
+  #footerAdvertisement {
+    margin-bottom:20px;
+    text-align: center;
+    img {
+      border:1px solid black;
+    }
+    .portraitTablet({
+      display: none;
+    })
+
+  }
+  #footerAdvertisementMobile {
+    display:none;
+    margin:0px auto 20px;
+    text-align: center;
+
+    img {
+      border:1px solid black;
+    }
+    .portraitTablet({
+      display: block;
+    })
+  }
+}

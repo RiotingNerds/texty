@@ -1,0 +1,46 @@
+@import "../assets/dv/common/include";
+#masthead {
+  .main-menu {
+    .header.header-search {
+      margin-top:5px;
+    }
+  }
+}
+.topSearch {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  #lightboxForm {
+    display: flex;
+    .portraitTablet({
+      flex-direction: column;  
+    });
+    .inputContainer {
+      flex-grow: 2;
+      align-items: center;
+      margin-right: 20px;
+      .portraitTablet({
+        margin-right:0px;
+      });
+      .commonInput {
+        margin-top:6px;
+      }
+    }
+    .btnContainer {
+      .commonBtn {
+        flex-grow:1;
+        .portraitTablet({
+          margin-top:5px;
+          text-align:center;
+          display:block;
+        });
+      }
+    }
+  }
+  #clearSearch {
+    margin-left:5px;
+    .portraitTabletNew({
+      margin-left:0px;
+      margin-top:5px;
+    });
+  }
+}

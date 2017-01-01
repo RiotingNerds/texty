@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic);
+@montserractBold: "montserratbold";
+@montserractLight: "montserratlight";
+@montserractReg: "montserratregular";
+@playfairBlack: "playfair_displayblack";
+@playfairBlackItalic: "playfair_displayblack_italic";
+@playfairBold: "playfair_displaybold";
+@playfairBoldItalic: "playfair_displaybold_italic";
+@playfairItalic: "playfair_displayitalic";
+@playfairReg: "playfair_displayregular";
+
+@titleFont:Montserrat;
+@bodyFont:"Playfair Display";
+@menuFont:"Playfair Display";
+@footerFont: 'Source Sans Pro', sans-serif;
+
+.commonTitleFont(@line-height:150%,@fontType:@titleFont) {
+  line-height: @line-height;
+  letter-spacing: 0px;
+  font-family: @fontType;
+}
+.commonBodyFont(@line-height:150%,@fontType:@bodyFont) {
+  line-height: @line-height;
+  letter-spacing: 0px;
+  font-family: @fontType;
+}

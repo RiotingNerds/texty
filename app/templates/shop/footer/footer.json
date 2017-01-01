@@ -1,0 +1,84 @@
+{
+  "col1":[
+    {
+      "link":"/about-us",
+      "text":"About Us"
+    },
+    {
+      "link":"/advertise-beauty-magazine",
+      "text":"Advertise"
+    },
+    {
+      "link":"/contact-us",
+      "text":"Contact Us"
+    },
+    {
+      "link":"/term-of-use",
+      "text":"Term of Use"
+    },
+    {
+      "link":"/privacy-policy",
+      "text":"Privacy Policy"
+    },
+    {
+      "link":"/careers",
+      "text":"Careers"
+    }
+  ],
+  "col2":[
+    {
+      "link":"/beauty-tips",
+      "text":"About Us"
+    },
+    {
+      "link":"/deal",
+      "text":"Vanity Perks"
+    },
+    {
+      "link":"/beauty-reviews",
+      "text":"Reviews"
+    },
+    {
+      "link":"/video-tutorial",
+      "text":"Videos"
+    },
+    {
+      "link":"/contests",
+      "text":"Contests"
+    },
+    {
+      "link":"/questions",
+      "text":"Beauty Q&A"
+    },
+    {
+      "link":"/opinion",
+      "text":"Opinion"
+    }
+  ],
+  "col3":[
+    {
+      "link":"/news",
+      "text":"News & Stories"
+    },
+    {
+      "link":"/trends",
+      "text":"Trends & Styles"
+    },
+    {
+      "link":"/weddings",
+      "text":"Weddings"
+    },
+    {
+      "link":"/fitness",
+      "text":"Fitness & Wellness"
+    },
+    {
+      "link":"/celebrity",
+      "text":"Celebrities"
+    },
+    {
+      "link":"/mensgrooming",
+      "text":"Men’s Grooming"
+    }
+  ]
+}

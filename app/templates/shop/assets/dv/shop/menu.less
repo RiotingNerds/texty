@@ -1,0 +1,59 @@
+@import "../common/include";
+
+.shop_menu {
+	color:black;
+	padding:15px;
+	position: relative;
+	#menu-dvshop {
+    position: relative;
+		.flex-container();
+    .menu-item {
+      .flex();
+      margin-right: 40px;
+      &:hover {
+        .sub-menu {
+          display:block;
+          position: absolute;
+          left: 0px;
+        }
+      }
+      a {
+        .commonTitleFont(150%,@titleFont);
+        text-transform: uppercase;
+      }
+      > a {
+        color:#171717;
+      }
+      .sub-menu {
+        display:none;
+        background-color: white;
+        padding: 15px;
+        width: 100%;
+        .box-sizing();
+        position: absolute;
+        z-index: 10;
+        &:hover { 
+          display:block;
+        }
+        .sub-posts {
+          .flex-container();
+          li {
+            width: 170px;
+            a {
+              color:black;
+            }
+          }  
+        }
+        .sub-links {
+            width: 432px;
+            position: absolute;
+            height: 100%;
+            background-color: white;
+            padding: 10px;
+            .box-sizing();
+        }
+      }
+      
+    }
+	}
+}
